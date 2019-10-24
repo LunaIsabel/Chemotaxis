@@ -18,20 +18,18 @@ Bacteria[] group = new Bacteria[700];
  class Bacteria    
  {     
  	//lots of java!
- 	int ReiniciaX, ReiniciaY;
+ 	int ReiniciaX, ReiniciaY, Micolor;
  	Bacteria(int x, int y){
  	    ReiniciaX = x;
  	    ReiniciaY = y;
+ 	    Micolor = 255;
     }
 	void walk(){
 		ReiniciaX = ReiniciaX + (int)(Math.random() * 100) - 50;
 		ReiniciaY = ReiniciaY + (int)(Math.random() * 100) - 50;
 	}
 	void show(){
-		int a = (int)(Math.random() * 255) + 90;
-		int b = (int)(Math.random() * 255) + 90;
-		int c = (int)(Math.random() * 255) + 90;
-		fill(a, b, c);
+		fill(Micolor, 255, 255);
 		ellipse(ReiniciaX, ReiniciaY, 3, 3);
 	}
 	void mousePressed(){
