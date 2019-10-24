@@ -10,6 +10,7 @@ Bacteria[] group = new Bacteria[700];
  }   
  void draw()   
  {   
+ 	background(0, 0, 0);
  	for(int i = 0; i < group.length; i++){
  		group[i].walk();
  		group[i].show();
@@ -25,8 +26,8 @@ Bacteria[] group = new Bacteria[700];
  	    Micolor = 255;
     }
 	void walk(){
-		ReiniciaX = ReiniciaX + (int)(Math.random() * 100) - 50;
-		ReiniciaY = ReiniciaY + (int)(Math.random() * 100) - 50;
+		ReiniciaX = ReiniciaX + (int)(Math.random() * 51) - 25;
+		ReiniciaY = ReiniciaY + (int)(Math.random() * 51) - 25;
 	}
 	void show(){
 		fill(Micolor, 255, 255);
@@ -35,8 +36,8 @@ Bacteria[] group = new Bacteria[700];
 	void mousePressed(){
 		for(int i = 0; i < group.length; i++){
 			background(0, 0, 0);
-			group[i].ReiniciaX = (int)(Math.random() * 2) - 2;
-			group[i].ReiniciaY = (int)(Math.random() * 2) - 2;
+			group[i].ReiniciaX = (int)(Math.random() * 51) - 25;
+			group[i].ReiniciaY = (int)(Math.random() * 51) - 25;
 		}
 	}	   
  }    
