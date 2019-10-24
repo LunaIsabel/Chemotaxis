@@ -16,6 +16,13 @@ Bacteria[] group = new Bacteria[700];
  		group[i].show();
  	}
  }  
+ void mousePressed(){
+ 	background(0, 0, 0);
+		for(int i = 0; i < group.length; i++){
+			group[i].ReiniciaX = 450;
+			group[i].ReiniciaY = 450;
+		}
+	}	 
  class Bacteria    
  {     
  	//lots of java!
@@ -33,11 +40,5 @@ Bacteria[] group = new Bacteria[700];
 		fill(Micolor, 255, 255);
 		ellipse(ReiniciaX, ReiniciaY, 3, 3);
 	}
-	void mousePressed(){
-		for(int i = 0; i < group.length; i++){
-			background(0, 0, 0);
-			group[i].ReiniciaX = (int)(Math.random() * 51) - 25;
-			group[i].ReiniciaY = (int)(Math.random() * 51) - 25;
-		}
-	}	   
+	  
  }    
