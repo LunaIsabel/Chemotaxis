@@ -1,13 +1,44 @@
- //declare bacteria variables here   
+ //declare bacteria variables here
+Bacteria[] group = new Bacteria[700];
  void setup()   
  {     
- 	//initialize bacteria variables here   
+ 	size(900, 900);
+ 	background(0, 0, 0); 
+ 	for(int i = 0; i < group.length; i++){
+ 		group[i] = new Bacteria(450, 450);
+ 	}
  }   
  void draw()   
- {    
- 	//move and show the bacteria   
+ {   
+ 	for(int i = 0; i < group.length; i++){
+ 		group[i].walk();
+ 		group[i].show();
+ 	}
  }  
  class Bacteria    
  {     
- 	//lots of java!   
+ 	//lots of java!
+ 	int ReiniciaX, ReiniciaY;
+ 	Bacteria(int x, int y){
+ 	    ReiniciaX = x;
+ 	    ReiniciaY = y;
+    }
+	void walk(){
+		ReiniciaX = ReiniciaX + (int)(Math.random() * 100) - 50;
+		ReiniciaY = ReiniciaY + (int)(Math.random() * 100) - 50;
+	}
+	void show(){
+		int a = (int)(Math.random() * 255) + 90;
+		int b = (int)(Math.random() * 255) + 90;
+		int c = (int)(Math.random() * 255) + 90;
+		fill(a, b, c);
+		ellipse(ReiniciaX, ReiniciaY, 3, 3);
+	}
+	void mousePressed(){
+		for(int i = 0; i < group.length; i++){
+			background(0, 0, 0);
+			group[i].ReiniciaX = (int)(Math.random() * 2) - 2;
+			group[i].ReiniciaY = (int)(Math.random() * 2) - 2;
+		}
+	}	   
  }    
