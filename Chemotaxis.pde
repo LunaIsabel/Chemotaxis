@@ -2,7 +2,6 @@
 Bacteria[] group = new Bacteria[700];
  void setup()   
  {     
- 	frameCount(30);
  	size(900, 900);
  	background(0, 0, 0); 
  	for(int i = 0; i < group.length; i++){
