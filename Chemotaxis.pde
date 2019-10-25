@@ -1,5 +1,5 @@
  //declare bacteria variables here
-Bacteria[] group = new Bacteria[700];
+Bacteria[] group = new Bacteria[3000];
  void setup()   
  {     
  	size(900, 900);
@@ -38,7 +38,7 @@ Bacteria[] group = new Bacteria[700];
 	}
 	void show(){
 		fill(Micolor, 255, 255);
-		ellipse(ReiniciaX, ReiniciaY, 3, 3);
+		ellipse(ReiniciaX, ReiniciaY, 5, 5);
 	}
 	  
  }    
