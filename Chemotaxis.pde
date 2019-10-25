@@ -1,5 +1,5 @@
  //declare bacteria variables here
-Bacteria[] group = new Bacteria[3000];
+Bacteria[] group = new Bacteria[1000];
  void setup()   
  {     
  	size(900, 900);
