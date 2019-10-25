@@ -38,7 +38,7 @@ Bacteria[] group = new Bacteria[3000];
 	}
 	void show(){
 		fill(Micolor, 255, 255);
-		ellipse(ReiniciaX, ReiniciaY, 5, 5);
+		ellipse(ReiniciaX, ReiniciaY, 15, 15);
 	}
 	  
  }    
